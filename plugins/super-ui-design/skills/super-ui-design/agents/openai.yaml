@@ -1,0 +1,4 @@
+interface:
+  display_name: "Super UI Design"
+  short_description: "Apply a quiet, compact, content-first UI style"
+  default_prompt: "Use $super-ui-design to design or refine this product interface in my personal visual style."

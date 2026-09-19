@@ -1,0 +1,18 @@
+{
+  "name": "super-ui-design",
+  "version": "0.1.0",
+  "description": "A quiet, compact, content-first product UI design system and workflow.",
+  "author": {
+    "name": "Lvkun"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Super UI Design",
+    "shortDescription": "Quiet, compact, content-first product UI design",
+    "longDescription": "Design, implement, refine, and review web or desktop product interfaces with a consistent system for spacing, typography, radius, elevation, color, states, and responsive behavior.",
+    "developerName": "Lvkun",
+    "category": "Design",
+    "capabilities": ["Design", "Review", "Write"],
+    "defaultPrompt": "Use $super-ui-design to design or refine this product interface in my personal visual style."
+  }
+}
