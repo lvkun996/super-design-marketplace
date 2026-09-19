@@ -4,10 +4,10 @@ This repository distributes the `super-ui-design` Codex plugin. The plugin conta
 
 ## Install on another device
 
-After publishing this repository as `lvkun996/super-ui-design-marketplace`, run:
+After publishing this repository as `lvkun996/super-design-marketplace`, run:
 
 ```bash
-codex plugin marketplace add lvkun996/super-ui-design-marketplace
+codex plugin marketplace add lvkun996/super-design-marketplace
 codex plugin add super-ui-design@personal
 ```
 
@@ -15,7 +15,7 @@ Start a new Codex task after installation so the new skill is loaded. Invoke it 
 
 ## Publish this local repository
 
-Create an empty GitHub repository named `super-ui-design-marketplace`, then add it as the remote for this directory and push the `main` branch.
+The repository is published as `lvkun996/super-design-marketplace` on GitHub.
 
 ## Update across devices
 
