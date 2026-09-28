@@ -1,0 +1,3 @@
+interface:
+  display_name: "iOS Glass Tab Bar"
+  short_description: "Design translucent, safe-area-aware mobile tab bars"

@@ -28,6 +28,7 @@ Before making visual decisions, read [references/visual-system.md](references/vi
 - Use blue for focus, links, selection, drag/drop, and actionable state—not as broad decorative fill.
 - Allow expressive type, atmospheric color, or subtle grids only in intentional empty, onboarding, or inspiration states.
 - If the project already has a strong brand system, preserve its identity while applying this skill's density, hierarchy, elevation, and interaction discipline.
+- For an explicitly requested floating iOS glass tab bar, use the specialized `$ios-glass-tabbar` skill for its material and geometry. This is a focused navigation treatment; do not extend glass styling to other persistent surfaces.
 
 ## Avoid generic output
 

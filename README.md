@@ -1,6 +1,6 @@
 # Super UI Design Marketplace
 
-This repository distributes the `super-ui-design` Codex plugin. The plugin contains a reusable product UI design skill covering visual direction, spacing, typography, radius, elevation, color, interaction states, dark mode, and responsive behavior.
+This repository distributes the `super-ui-design` Codex plugin. It includes the general `super-ui-design` skill for product UI work and the focused `ios-glass-tabbar` skill for floating mobile tab bars with translucent iOS glass styling.
 
 ## Install on another device
 
@@ -19,7 +19,7 @@ The repository is published as `lvkun996/super-design-marketplace` on GitHub.
 
 ## Update across devices
 
-Update the skill in `plugins/super-ui-design/skills/super-ui-design`, bump the plugin version, commit, and push. On each device, run:
+Update the relevant skill under `plugins/super-ui-design/skills/`, bump the plugin version, commit, and push. On each device, run:
 
 ```bash
 codex plugin marketplace upgrade personal
