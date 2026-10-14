@@ -1,6 +1,6 @@
 ---
 name: super-ios-ui-design
-description: Design or refine mobile web pages in Lvkun's iOS-inspired style from online-excel: compact headers, continuous flat content, clear typography, grouped lists, restrained glass navigation, and avatar interactions. Use for this project or requests for this personal iOS page style, not native SwiftUI or unrelated brand designs.
+description: "Design or refine mobile web pages in Lvkun's iOS-inspired style from online-excel: compact headers, continuous flat content, clear typography, grouped lists, restrained glass navigation, and avatar interactions. Use for this project or requests for this personal iOS page style, not native SwiftUI or unrelated brand designs."
 ---
 
 # Super iOS UI Design
