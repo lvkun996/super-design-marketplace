@@ -1,6 +1,6 @@
 # Super UI Design Marketplace
 
-This repository distributes the `super-ui-design` Codex plugin. It includes the general `super-ui-design` skill for product UI work and the focused `ios-glass-tabbar` skill for floating mobile tab bars with translucent iOS glass styling.
+This repository distributes the `super-ui-design` Codex plugin. It includes the general `super-ui-design` skill for product UI work and the focused `super-ios-glass-tabbar` skill for floating mobile tab bars with translucent iOS glass styling.
 
 ## Install on another device
 
