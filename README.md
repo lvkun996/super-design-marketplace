@@ -1,6 +1,10 @@
 # Super UI Design Marketplace
 
-This repository distributes the `super-ui-design` Codex plugin. It includes `super-ui-design` for general product UI work, `super-ios-ui-design` for compact iOS-inspired mobile pages with continuous flat content, and `super-ios-glass-tabbar` for floating translucent mobile navigation.
+This repository distributes the `super-ui-design` Codex plugin. It includes `super-ui-design` for general product UI work, `super-ios-ui-design` for compact iOS-inspired mobile pages with continuous flat content, `super-ios-glass-tabbar` for floating translucent mobile navigation, and `super-codex-standard-skill` for personal development and delivery constraints.
+
+## Personal development standard
+
+Invoke `$super-codex-standard-skill` to apply the project standard: avoid redundant builds, tests and verification; use uni-app + Vue 3 + TypeScript for mini-programs, React + antd for Admin, and Vue 3 + TypeScript with the bundled iOS design skills for H5. Reuse existing build/deployment scripts, supply one-click scripts for non-mini-program projects when missing, and reference the established Spring subservice architecture. Deployment scripts may configure usernames and passwords in plaintext; published templates must contain placeholders rather than real credentials. Creating a deployment script does not itself authorize deploying a project.
 
 ## Install on another device
 

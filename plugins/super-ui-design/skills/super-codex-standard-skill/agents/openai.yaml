@@ -1,0 +1,3 @@
+interface:
+  display_name: "super-codex-standard-skill"
+  short_description: "统一项目技术栈、H5 设计及部署脚本复用，禁止额外重复构建测试验证"
