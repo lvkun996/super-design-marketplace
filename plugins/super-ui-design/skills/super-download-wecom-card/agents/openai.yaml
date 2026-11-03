@@ -1,0 +1,4 @@
+interface:
+  display_name: "企业微信动态小程序卡片接续"
+  short_description: "换机接续视频捕获、带凭证原生卡片自动回复与固定下载页面的真机适配任务"
+  default_prompt: "使用 $super-download-wecom-card，读取交接快照并核对源码，继续实现带当前视频凭证的原生小程序卡片自动回复。"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Stardew Style Image"
+  short_description: "Generate Stardew-style pixel farm image prompts."
+  default_prompt: "Turn this scene into a Stardew-style pixel farm image prompt."

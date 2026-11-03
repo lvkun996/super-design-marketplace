@@ -1,6 +1,6 @@
 {
   "name": "super-ui-design",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "description": "A quiet, compact, content-first product UI design system and workflow.",
   "author": {
     "name": "Lvkun"
@@ -9,10 +9,14 @@
   "interface": {
     "displayName": "Super UI Design",
     "shortDescription": "Quiet, compact, content-first product UI design",
-    "longDescription": "Design, implement, refine, and review web or desktop product interfaces. Includes super-codex-standard-skill for personal project stacks, deployment script reuse, and avoiding redundant builds and checks.",
+    "longDescription": "Personal skills for product UI, Apple-style interactions, iOS mobile pages and tab bars, Super Note interfaces, Stardew-style image prompts, project development and deployment standards, and Super Download WeCom card continuation.",
     "developerName": "Lvkun",
     "category": "Design",
-    "capabilities": ["Design", "Review", "Write"],
+    "capabilities": [
+      "Design",
+      "Review",
+      "Write"
+    ],
     "defaultPrompt": "Use $super-ui-design to design or refine this product interface in my personal visual style."
   }
 }
