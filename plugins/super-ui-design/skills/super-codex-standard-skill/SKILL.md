@@ -24,7 +24,7 @@ description: "约束个人项目开发中的验证次数、技术栈、H5 设计
 | 小程序 | uni-app + Vue 3 + TypeScript |
 | Admin 管理后台 | React + Ant Design（antd） |
 | H5 | Vue 3 + TypeScript |
-| Spring 后端 | 参考下述既有子服务架构，按实际业务选用模块与组件 |
+| Spring 后端 | Spring Boot + Maven，按第 5 节的业务边界与分层组织 |
 
 - 小程序不使用 Vue 2 或 JavaScript 模板代替指定栈。
 - Admin 不默认使用 Vue、Element Plus 等替代 React + antd；语言及构建工具沿用项目约定。
@@ -57,13 +57,14 @@ description: "约束个人项目开发中的验证次数、技术栈、H5 设计
 - 明文配置权限不等于公开发布真实凭据：skill、公共模板及公开仓库仅使用占位值；实际项目中填写用户授权使用的账号密码，不在输出或日志中打印密码，不挪用参考项目的凭据。
 - 参考路径不可用时按上述流程及当前项目上下文实现，不以找不到本机参考文件为由阻塞。
 
-## 5. Spring 子服务架构参考
+## 5. Spring 后端架构
 
-- 可参考 `D:\code\zd\service\zhongde_admin` 中职责相近的子服务；只读借鉴，用户未授权时不修改该参考仓库。
-- 以实际子服务的 Maven 模块、启动入口和业务分层为依据，按需组织 `controller`、`service` / `service/impl`、`mapper`、`entity`、`dto`、`config`、`constant`、`integration`。
-- 沿用目标项目的统一响应、异常处理、鉴权、事务、数据库映射、配置和日志约定；所需公共依赖按现有项目整合，不为模仿目录添加空层或无用模块。
-- 接入现有 zhongde_admin 子服务时遵循其父 POM、JDK 和打包方式，不擅自升级；新独立项目根据任务及依赖选择兼容版本，不硬套旧项目的版本或全部微服务组件。
-- 参考架构不代表自动引入 Nacos、Gateway、Redis 等基础设施；仅采用业务和部署实际需要的部分。参考路径不可用时用上述分层原则继续。
+- **先划业务边界，再决定拆分。** 新项目使用 Spring Boot + Maven，单服务从一个可运行模块开始。业务确需独立发布或扩缩容时，按业务职责拆成可单独启动和打包的服务。多模块由父 POM 聚合模块，通过 `dependencyManagement` 统一依赖版本，子模块声明实际使用的依赖。维护已有项目时沿用其父 POM、JDK、Spring Boot 版本和打包入口。
+- **每个服务有自己的启动入口。** 将 `*Application` 放在服务根包，以 `@SpringBootApplication` 启动。按需声明服务和公共模块的组件、Mapper、Feign 扫描范围。只有可运行服务配置 Spring Boot 可执行 JAR 打包，公共模块提供普通 JAR。
+- **按职责分层。** `controller` 负责路由、请求绑定与校验，调用 `service` 并返回接口结果。`service` 负责业务规则、状态流转和事务边界，需要接口与实现分离时再增加 `service/impl`。`mapper` 或 `dao/mapper` 负责数据访问，`entity` 表达持久化模型，`dto` / `vo` 表达接口请求与响应。已有项目沿用现有包名，有需要再增加 `convert`、`constant` 等包。
+- **数据写入由业务归属服务负责。** 使用 MyBatis / MyBatis-Plus 的项目沿用现有 Mapper 约定，将复杂 SQL 放在资源目录的 Mapper XML 中，并保持 namespace 与扫描配置对应。在 Service 的业务操作边界处理同一事务内的多步写入，跨服务通过已约定的接口协作。
+- **公共模块与服务契约分开。** 有多个服务复用时，再提取稳定的响应类型、通用异常或基础组件到 `common`。将跨服务调用契约按提供方放入独立的 `*-api` 模块，包含调用接口和必要的 DTO / VO。调用方依赖契约，具体实现和持久化模型留在业务服务。已有共享实体模块按其现有契约维护。
+- **配置、鉴权和外部调用各有入口。** 用 `config` 管理框架装配与属性绑定，按 Spring Profile 区分环境。沿用项目统一的响应、异常处理、鉴权和日志约定，集中处理通用 HTTP 鉴权与异常映射。第三方调用收敛在 `integration` 或现有客户端包。网关、服务发现与配置中心、Redis、消息队列及定时任务按实际场景选用。
 
 ## 6. 基于开源项目的本地构建
 
